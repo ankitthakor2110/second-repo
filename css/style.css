@@ -12948,3 +12948,33 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+
+/* Target the inner wrapper Owl creates automatically */
+.owl-carousel .owl-stage-outer {
+  touch-action: pan-y !important;
+}
+
+.owl-carousel .owl-stage {
+  touch-action: pan-y !important;
+}
+
+/* 1. Ensure the main container allows vertical scrolling */
+.home-slider {
+  touch-action: pan-y !important;
+}
+
+/* 2. Disable pointer events ONLY on decorative elements (titles, text, etc.) 
+      that don't need to be clicked. This allows the swipe to pass "through" them. */
+.home-slider h1,
+.home-slider p,
+.home-slider .owl-item {
+  pointer-events: none;
+}
+
+/* 3. Re-enable pointer events ONLY for buttons or links 
+      so they remain functional. */
+.home-slider a,
+.home-slider button,
+.home-slider .btn {
+  pointer-events: auto !important;
+}
